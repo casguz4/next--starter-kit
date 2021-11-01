@@ -22,6 +22,5 @@ function MyApp({ Component, pageProps }: AppProps) {
       </ThemeProvider>
     </React.Fragment>
   )
-  return <Component {...pageProps} />
 }
 export default MyApp
