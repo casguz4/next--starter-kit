@@ -1,12 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import dynamic from 'next/dynamic'
 import { Box, Container, Typography } from '@mui/material'
 
-const DynamicLink = dynamic(() => import('../common/components/Link'), {
-  loading: () => <p>...Link Coming Soon</p>,
-  ssr: false,
-})
+import Link from 'common/components/Link'
 
 const Home: NextPage = () => {
   return (
@@ -18,9 +14,9 @@ const Home: NextPage = () => {
       </Head>
       <Box sx={{ my: 4 }}>
         <Typography variant="h4" component="h1" gutterBottom>
-          <DynamicLink href="/about" color="primary">
+          <Link href="/about" color="primary">
             About Page :)
-          </DynamicLink>
+          </Link>
         </Typography>
       </Box>
     </Container>
